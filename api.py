@@ -60,12 +60,7 @@ def scholarships(preference = "schools"):
 					others["EndDate"].append(data[x+1].text.decode("utf-8").replace("  ","").replace("\n",""))
 
 				flag = 0	
-
-	# print schoolStudents
-	# print "\n"*5
-	# print others
-	# print "\n"*5
-	# print PgStudents
+				
 	if preference == "schools":
 		return schoolStudents
 	if preference == "pg" :
@@ -99,9 +94,7 @@ def CBSEevents():
 					flag = 1
 					break
 			if flag == 1:
-				break	
-	# print Events
-
+				break
 	return Events
 
 def Competetive(options='contests',status='active'):
@@ -133,6 +126,3 @@ def Competetive(options='contests',status='active'):
 			return hackathons["active"]
 		else :
 			return hackathons["upcoming"]
-
-
-
